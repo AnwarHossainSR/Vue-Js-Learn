@@ -4,6 +4,9 @@
         <h3>Name : {{ name }}</h3>
         <p>Email : {{ email }}</p>
         <p>Address : {{ address }}</p>
+        <p>Method Name : {{ getname() }}</p><br>
+        <button v-on:click="increment()">Click</button>
+        <h1>{{ count }}</h1>
     </div>
 </template>
 
@@ -16,7 +19,16 @@
         data(){
             return{
                 email:'mahedianwar@Gmail.com',
-                address:'Dhaka'
+                address:'Dhaka',
+                count:0
+            }
+        },
+        methods:{
+            getname(){
+                return this.name
+            },
+            increment(){
+                this.count++
             }
         }
     }
