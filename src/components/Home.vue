@@ -6,7 +6,9 @@
         <p>Address : {{ address }}</p>
         <p>Method Name : {{ getname() }}</p><br>
         <button v-on:click="increment()">Click</button>
-        <h1>{{ count }}</h1>
+        <h1>{{ count }}</h1><br>
+        <input type="text" v-model="count">
+        <h1>{{ count }}</h1><br>
     </div>
 </template>
 
