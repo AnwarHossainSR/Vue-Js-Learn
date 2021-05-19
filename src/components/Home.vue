@@ -1,43 +1,39 @@
 <template>
     <div>
-        <h1>Home Component</h1>
-        <h3>Name : {{ name }}</h3>
-        <p>Email : {{ email }}</p>
-        <p>Address : {{ address }}</p>
-        <p>Method Name : {{ getname() }}</p><br>
-        <button v-on:click="increment()">Click</button>
-        <h1>{{ count }}</h1><br>
-        <input type="text" v-model="count">
-        <h1>{{ count }}</h1><br>
+        
+        <h1>Login</h1><br>
+    
+        <input type="text" name="email" v-model="email"><br>
+    
+        <input type="text" name="password" v-model="password"><br>
+    
+        <button v-on:click="getData">Submit</button>
+    
     </div>
 </template>
 
 <script>
-    export default {
-        name:'Home',
-        props:{
-            name:String
-        },
-        data(){
-            return{
-                email:'mahedianwar@Gmail.com',
-                address:'Dhaka',
-                count:0
-            }
-        },
-        methods:{
-            getname(){
-                return this.name
-            },
-            increment(){
-                this.count++
-            }
+export default {
+    name: 'Home',
+    props: {
+        name: String
+    },
+    data() {
+        return {
+            email:null,
+            password:null
+        }
+    },
+    methods: {
+        getData() {
+            alert(this.email +" "+this.password)
         }
     }
+}
 </script>
 
 <style scoped>
-    h1{
-        color: darkolivegreen;
-    }
+h1 {
+    color: darkolivegreen;
+}
 </style>
