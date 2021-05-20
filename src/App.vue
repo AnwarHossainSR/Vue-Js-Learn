@@ -1,5 +1,5 @@
 <template>
-  <Home name="Mahedi Hasan" />
+  <Home  />
 </template>
 
 <script>
